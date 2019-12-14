@@ -156,4 +156,4 @@ ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_EMAIL_REQUIRED = True
 
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
