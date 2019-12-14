@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import django_heroku
+#import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +26,7 @@ SECRET_KEY = 'r2hr#58-+1_ty-se_d6j#9=^@v+b59ls%b3@_%8_4m5((rbj*l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['zaptra.herokuapp.com']
+ALLOWED_HOSTS = ['zaptra.herokuapp.com','192.168.1.11']
 
 
 # Application definition
@@ -144,8 +144,16 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #mostra email no console sem enviar
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'#'smtp-relay.sendinblue.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'flostucs@gmail.com'#'flostucs@gmail.com'#os.environ.get('MAIL_USER')
+EMAIL_HOST_PASSWORD = 'gynfoltmxamaxbch'#'1aPQWDg6YIndqAfH'#os.environ.get('MAIL_PASS')
+
 ACCOUNT_USERNAME_REQUIRED = True
-ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_EMAIL_REQUIRED = True
 
 
 django_heroku.settings(locals())
