@@ -11,6 +11,7 @@ django-allauth==0.40.0
 django-cpffield==0.1.1
 django-crispy-forms==1.7.2
 django-easy-pdf==0.1.1
+django-heroku==0.3.1
 django-tinymce4-lite==1.7.5
 gunicorn==19.9.0
 html5lib==1.0.1
