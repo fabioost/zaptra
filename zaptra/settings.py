@@ -26,7 +26,7 @@ SECRET_KEY = 'r2hr#58-+1_ty-se_d6j#9=^@v+b59ls%b3@_%8_4m5((rbj*l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['zaptra.herokuapp.com','192.168.1.11']
+ALLOWED_HOSTS = ['zaptra.herokuapp.com','192.168.1.11','127.0.0.1']
 
 
 # Application definition
@@ -142,7 +142,7 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
-SITE_ID = 1
+SITE_ID = 2
 
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #mostra email no console sem enviar
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
