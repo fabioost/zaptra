@@ -9,4 +9,5 @@ from . import views
 urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
     path("entrada/", views.nova_entrada, name="nova_entrada"),
+    path("localizacao/", views.localizacao, name="localizacao"),
 ]

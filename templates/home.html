@@ -5,14 +5,22 @@
 
 	{% load socialaccount %}
 
-	<h4>Home</h4>
+	
 	{% if user.is_authenticated %}
-	<p>Welcome {{ user.username }} !!!</p>
-	<p><a href="{% url 'account_logout' %}">Log out</a>
+	<p>Bem vindo {{ user.username }} !!!</p>
+	<p><a href="/localizacao">Rastrear Produto</a>
+	<p><a href="{% url 'account_logout' %}">Sair</a>
 	{% else %}
+	<!--
 	<p><a href="{% url 'account_signup' %}">Sign Up</a></p>
 	<p><a href="{% url 'account_login' %}">Log In </a></p>
 	<p><a href="{% provider_login_url 'google' %}">Log In with Gmail</a></p>
+	-->
+	<p><h4> ATENÇÃO!!</h4></p>
+	<p>Para ter acesso aos dados do produto é necessário estar cadastrado no sistema.</p>
+	<p>Se não possui conta faça seu cadastro <a href="/users/register/">aqui</a>.</p>
+	<p>Se já possui conta então <a href="/accounts/login/">entre</a>.</p>
+	
 	{% endif %}
 
 
