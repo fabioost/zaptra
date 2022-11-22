@@ -18,7 +18,7 @@ html5lib==1.0.1
 idna==2.8
 jsmin==2.2.2
 oauthlib==3.1.0
-Pillow==6.2.1
+Pillow==9.3.0
 psycopg2==2.8.4
 psycopg2-binary==2.8.4
 pycparser==2.19
